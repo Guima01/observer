@@ -11,7 +11,7 @@ class ClienteTest {
         Cliente cliente = new Cliente("Guilherme");
         cliente.comprar(concessionaria);
         concessionaria.lancarParcelas();
-        assertEquals("Guilherme, parcela do carro lançada {ano=2021, cor=preto, nomeCarro='Uno', nomeFilial='Fiat'}", cliente.getUltimoAviso());
+        assertEquals("Guilherme, Novo carro disponivel {ano=2021, cor=preto, nomeCarro='Uno', nomeFilial='Fiat'}", cliente.getUltimoAviso());
     }
 
     @Test
@@ -22,8 +22,8 @@ class ClienteTest {
         cliente1.comprar(concessionaria);
         cliente2.comprar(concessionaria);
         concessionaria.lancarParcelas();
-        assertEquals("Guilherme, parcela do carro lançada {ano=2021, cor=preto, nomeCarro='Uno', nomeFilial='Fiat'}", cliente1.getUltimoAviso());
-        assertEquals("João, parcela do carro lançada {ano=2021, cor=preto, nomeCarro='Uno', nomeFilial='Fiat'}", cliente2.getUltimoAviso());
+        assertEquals("Guilherme, Novo carro disponivel {ano=2021, cor=preto, nomeCarro='Uno', nomeFilial='Fiat'}", cliente1.getUltimoAviso());
+        assertEquals("João, Novo carro disponivel {ano=2021, cor=preto, nomeCarro='Uno', nomeFilial='Fiat'}", cliente2.getUltimoAviso());
     }
 
     @Test
@@ -43,7 +43,7 @@ class ClienteTest {
         cliente1.comprar(concessionaria1);
         cliente2.comprar(concessionaria2);
         concessionaria1.lancarParcelas();
-        assertEquals("Guilherme, parcela do carro lançada {ano=2021, cor=preto, nomeCarro='Uno', nomeFilial='Fiat'}", cliente1.getUltimoAviso());
+        assertEquals("Guilherme, Novo carro disponivel {ano=2021, cor=preto, nomeCarro='Uno', nomeFilial='Fiat'}", cliente1.getUltimoAviso());
         assertEquals(null, cliente2.getUltimoAviso());
     }
 

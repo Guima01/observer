@@ -21,7 +21,7 @@ public class Cliente implements Observer {
 
     @Override
     public void update(Observable concessionaria, Object arg1){
-        this.ultimoAviso = this.nome + ", parcela do carro lançada " + concessionaria.toString();
+        this.ultimoAviso = this.nome + ", Novo carro disponivel " + concessionaria.toString();
     }
 
 
